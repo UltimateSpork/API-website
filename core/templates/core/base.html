@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<title>{% block title %} API Portfolio {% endblock %} </title>
+
+
+{% load static %}
+
+<link href = "https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+
+</head>
+
+<body class = "bg-gray-100 text-gray-900 flex flex-col min-h-screen">
+
+		<main class = "flex-grow">
+			
+		<h1 class="text-3xl font-bold underline">
+			
+		</h1>
+	<header class = "bg-white border-b border-gray-200"> 
+		<nav class = "max-w-7x1 mx-auto px-4 flex justify-between items-center h-14">
+			<!-- <h1> API Website </h1> -->
+			<a class = text-black bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">API Website</a>
+
+
+		<div class = "flex space-x-6">
+
+    {% block homeButton %}
+
+    {% endblock %}
+
+		<a href="/about" class="text-black bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">about</a>
+
+
+		<a href="https://www.kaggle.com/datasets/pinuto/us-oil-and-gas-production-and-disposition-20152025" target="_blank" class="text-black bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">source</a>
+
+
+    {% block auth_button %}
+
+    <a href = "/login" class =" text-black bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none"> Login </a>
+
+    {% endblock %}
+
+		</div>
+		</nav>
+
+
+	</header>
+{% if messages %}
+  {% for message in messages %}
+    <div
+      role="alert"
+      class="p-4 mb-4 text-sm text-grey-800 bg-red-100 rounded-lg"
+
+    >
+      <span class="font-medium">{{ message }}</span>
+    </div>
+  {% endfor %}
+{% endif %}
+{% block content %}
+
+
+
+
+
+{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}
+
+		</main>
+
+<footer class = "bg-gray-50 text-center py-4 border-t border-gray-200">
+
+	© 2026 Shahmir Ali
+	
+
+</footer>
+<script>
+        function handleLogout() {
+            console.log("Logout triggered"); 
+            
+            localStorage.clear(); 
+            
+            window.location.href = "/login/";
+        }
+    </script>
+</body>
+</html>
+
+
+
+

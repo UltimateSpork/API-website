@@ -1,0 +1,31 @@
+{% extends 'core/base.html' %} 
+{% block title %} About | API Website {% endblock %}
+
+{% block content %}
+
+<div class="max-w-5xl mx-auto px-4 py-12">
+
+
+  <p class="text-black mb-4">
+   This site provides insights into oil and gas production across the United States.
+  </p>
+
+  <p class="text-black mb-4">
+    The data allows users to:
+  </p>
+
+  <ul class="list-disc list-inside text-black mb-4 space-y-1">
+    <li>View total productioni and average production per year.</li>
+    <li>Compare production by state, county, commodity, and disposition.</li>
+    <li>Explore offshore vs onshore production trends.</li>
+    <li>Access data directly via API endpoints for integration into other projects.</li>
+  </ul>
+
+  <p class="text-black leading-relaxed">
+    This website was built as a data visualization and API tool and is built using Django, Tailwind CSS, and Django Rest Framework.
+  </p>
+
+</div>
+
+{% endblock %}
+

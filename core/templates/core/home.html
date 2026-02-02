@@ -1,0 +1,50 @@
+{% extends 'core/base.html' %} 
+{% block title %} Home | API Website {% endblock %}
+
+{% block homeButton %}
+        <a href = "/home" class =" text-black bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none"> home </a>
+
+{% endblock %}
+
+{% block auth_button %}
+    <button onclick="handleLogout()" 
+            class="text-black hover:text-red-700 font-medium rounded-base text-sm px-4 py-2.5">
+       logout
+    </button>
+
+{% endblock %}
+
+
+{% block content %}
+
+<br>
+
+<div class="grid grid-cols-4 grid-rows-3 gap-4">
+
+<a href="/api/production/total/" class= "transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-gray-100 hover:shadow-xl row-span-1 mx-4 bg-neutral-primary-soft block p-6 border border-default rounded-base shadow-md text-center"> Total Production </a>
+
+<a href="/api/production/by-state/" class= " transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-gray-100 hover:shadow-xl shadow-md row-span-1 mx-4 bg-neutral-primary-soft block p-6 border border-default rounded-base shadow-xs text-center"> Production by State </a>
+
+
+<a href="/api/production/by-county/" class= " transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-gray-100 hover:shadow-xl shadow-md row-span-1 mx-4 bg-neutral-primary-soft block p-6 border border-default rounded-base shadow-xs text-center"> Total Production by County</a>
+
+<a href="/api/production/by-commodity/" class= " transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-gray-100 hover:shadow-xl shadow-md row-span-1 mx-4 bg-neutral-primary-soft block p-6 border border-default rounded-base shadow-xs text-center"> Total Production by Commodity</a>
+
+<a href="/api/production/average-year/" class=" transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-gray-100 hover:shadow-xl shadow-md row-span-1 mx-4 bg-neutral-primary-soft block p-6 border border-default rounded-base shadow-xs text-center">Average Production per Year</a>
+
+<a href="/api/production/offshore-onshore/" class=" transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-gray-100 hover:shadow-xl shadow-md row-span-1 mx-4 bg-neutral-primary-soft block p-6 border border-default rounded-base shadow-xs text-center">Offshore & Onshore Production </a>
+
+<a href="/api/production/by-disposition/" class=" transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-gray-100 hover:shadow-xl shadow-md row-span-1 mx-4 bg-neutral-primary-soft block p-6 border border-default rounded-base shadow-xs text-center">Production by Disposition</a>
+
+
+<a href="/api/production/top-counties/" class=" transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-gray-100 hover:shadow-xl shadow-md row-span-1 mx-4 bg-neutral-primary-soft block p-6 border border-default rounded-base shadow-xs text-center">Top 5 Counties</a>
+
+<a href="/api/production/over-time/" class=" transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-gray-100 hover:shadow-xl shadow-md row-span-1 mx-4 bg-neutral-primary-soft block p-6 border border-default rounded-base shadow-xs text-center">Production Over Time (State)</a>
+
+
+<a href="/api/production/by-landclass/" class=" transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-gray-100 hover:shadow-xl shadow-md row-span-1 mx-4 bg-neutral-primary-soft block p-6 border border-default rounded-base shadow-xs text-center">Production by Land Class</a>
+
+</div>
+
+
+{% endblock %}
